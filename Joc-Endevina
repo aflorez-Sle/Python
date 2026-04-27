@@ -1,0 +1,28 @@
+import random  # Per generar números aleatoris
+
+# Generar número aleatori entre 1 i 100
+numeroSecret = random.randint(1, 100)
+
+# Inicialitzar comptador d'intents
+intents = 0
+
+# Bucle fins que l'usuari encerti
+while True:
+    
+    # Sumar inten
+    intents += 1
+    
+    # Demanar número a lusuari
+    numeroUsuari = int(input("Quin número he pensat? "))
+    
+    # Comprovar si ha encertat
+    if numeroUsuari == numeroSecret:
+        print("Has encertat en", intents, "intents")
+        break
+    
+    # Donar pistes
+    elif numeroUsuari < numeroSecret:
+        print("És més gran")
+    
+    else:
+        print("És més petit")
