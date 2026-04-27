@@ -1,0 +1,17 @@
+#Per pOdER Demanar dades a l'usuari
+dni = input("Introdueix el DNI: ")
+preu = float(input("Introdueix el preu de l'article: "))
+descompte = float(input("Introdueix el % de descompte: "))
+iva = float(input("Introdueix el % d'IVA: "))
+
+# Com Calcular el descompte
+quantitat_descompte = preu * descompte / 100
+preu_amb_descompte = preu - quantitat_descompte
+
+# Calcular l'IVA
+quantitat_iva = preu_amb_descompte * iva / 100
+preu_final = preu_amb_descompte + quantitat_iva
+
+# Mostrar resultats
+print(dni)
+print(preu_final)
