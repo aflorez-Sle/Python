@@ -1,0 +1,37 @@
+# Bucle que es repeteix fins que l'usuari escriu una operació incorrecta
+while True:
+    
+    # Demanar els números
+    primerNumero = float(input("Introdueix el primer número: "))
+    segonNumero = float(input("Introdueix el segon número: "))
+    
+    # Demanar l'operació
+    operacio = input("Introdueix l'operació (+, -, *, /, %): ")
+    
+    # Fer el càlcul segons l'operacio
+    if operacio == "+":
+        resultat = primerNumero + segonNumero
+    
+    elif operacio == "-":
+        resultat = primerNumero - segonNumero
+    
+    elif operacio == "*":
+        resultat = primerNumero * segonNumero
+    
+    elif operacio == "/":
+        # Comprovació per evitar divisió per zero
+        if segonNumero == 0:
+            print("Error: no es pot dividir per zero")
+            continue
+        resultat = primerNumero / segonNumero
+    
+    elif operacio == "%":
+        resultat = primerNumero % segonNumero
+    
+    else:
+        # Si l'operació no és correcta, acabar el programa
+        print("Operació no vàlida. Final del programa.")
+        break
+    
+    # Mostrar el resultat
+    print("Resultat:", resultat)
